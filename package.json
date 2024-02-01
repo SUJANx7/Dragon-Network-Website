@@ -13,5 +13,10 @@
     "website"
   ],
   "author": "G9 Aerospace",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "winston": "^3.11.0"
+  }
 }
