@@ -1,22 +1,20 @@
+// Import required modules
 const express = require('express');
-const dotenv = require('dotenv');
-const logger = require('./logger');
+const path = require('path');
 
-dotenv.config();
-
+// Create an Express application
 const app = express();
-const port = process.env.PORT || 3000;
 
+// Set the public folder as the static directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define a route to handle requests to the root URL
 app.get('/', (req, res) => {
-    logger.info('Request to / endpoint');
-    res.send('Hello, World!');
+    res.send('Hello, this is your server!');
 });
 
-app.get('/error', (req, res) => {
-    logger.error('This is an error message');
-    res.status(500).send('Internal Server Error');
-});
-
-app.listen(port, () => {
-    logger.info(`Server is running on port ${port}`);
+// Start the server on port 3000
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
