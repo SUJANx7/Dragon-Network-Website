@@ -1,11 +1,13 @@
+/* Global Styles */
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f8ff; /* Light Blue Background */
     color: #000; /* Black Text Color */
 }
 
+/* Header and Footer Styles */
 header, footer {
     background-color: #4682b4; /* Steel Blue Header and Footer */
     color: #fff; /* White Text Color for Header and Footer */
@@ -17,4 +19,83 @@ header, footer {
     margin: 0 auto;
 }
 
-/* Add any additional styles as needed */
+/* Navbar Styles */
+.navbar {
+    background-color: #4682b4; /* Steel Blue Background */
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.navbar li {
+    border-right: 1px solid #fff; /* White border between navbar items */
+    flex: 1; /* Distribute available space equally among items */
+}
+
+.navbar a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #fff; /* White background on hover */
+    color: #4682b4; /* Steel Blue text on hover */
+}
+
+/* 3D Box Shadow Effect */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Thickness of the 3D effect */
+    background: linear-gradient(to right, transparent, #4682b4, transparent); /* Steel Blue gradient */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.navbar a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Animation for subtle movement */
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* White shading for 3D effect */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover::after {
+    opacity: 1;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .navbar li {
+        border-right: none; /* Remove border on smaller screens */
+        border-bottom: 1px solid #fff; /* Add border below each item */
+        flex: 1; /* Adjust flex property for better spacing on smaller screens */
+    }
+}
