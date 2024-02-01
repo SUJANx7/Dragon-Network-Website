@@ -4,7 +4,7 @@
     --header-footer-bg-color: #4682b4; /* Steel Blue Header and Footer */
     --header-footer-text-color: #fff; /* White Text Color for Header and Footer */
     --navbar-bg-color: #4682b4; /* Steel Blue Background */
-    --navbar-item-border-color: #fff; /* White border between navbar items */
+    --navbar-item-border-color: transparent; /* No visible border between navbar items */
     --navbar-text-color: #fff; /* Text color for navbar items */
     --navbar-hover-bg-color: #fff; /* White background on hover */
     --navbar-hover-text-color: #4682b4; /* Steel Blue text on hover */
@@ -14,8 +14,8 @@
 
 /* Global Styles */
 body {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     font-family: Arial, sans-serif;
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
@@ -48,13 +48,14 @@ header, footer {
 }
 
 .navbar li {
-    border-right: 1px solid var(--navbar-item-border-color);
+    border-right: none;
+    border-bottom: 1px solid var(--navbar-item-border-color);
     flex: 1;
 }
 
 .navbar a {
     display: block;
-    padding: 15px 20px;
+    padding: 10px;
     text-decoration: none;
     color: var(--navbar-text-color);
     transition: background-color 0.3s, color 0.3s;
