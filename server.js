@@ -1,6 +1,6 @@
-// Import required modules
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
 
 // Create an Express application
 const app = express();
@@ -13,8 +13,10 @@ app.get('/', (req, res) => {
     res.send('Hello, this is your server!');
 });
 
-// Start the server on port 3000
-const PORT = 3000;
+// Use the PORT from .env or default to 3000
+const PORT = process.env.PORT || 3000;
+
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
