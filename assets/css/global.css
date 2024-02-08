@@ -1,29 +1,110 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+/* Variables */
+:root {
+    --primary-bg-color: #333;
+    --text-color: #fff;
+    --base-font: 'Arial', sans-serif;
+    --padding-unit: 10px;
+    --border-width: 2px;
+    --link-color: #007bff; /* Blue color for links */
+    --email-color: #28a745; /* Green color for email addresses */
+
+    --header-bg-color: var(--primary-bg-color);
+    --footer-bg-color: var(--primary-bg-color);
+    --link-text-color: var(--text-color);
+    --nav-hover-bg-color: #555;
+    --body-bg-color: #f4f4f4;
+    --section-bg-color: #ddd;
 }
 
+/* Body Styling */
+body {
+    font-family: var(--base-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+}
+
+/* Links Styling */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Email Addresses Styling */
+a[href^="mailto:"] {
+    color: var(--email-color);
+}
+
+/* Header Styling */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    padding: var(--padding-unit);
+}
+
+/* Navigation (nav) Styling */
+nav {
+    background-color: var(--primary-bg-color);
+    color: var(--link-text-color);
+    padding: var(--padding-unit);
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline-block;
+    margin-right: var(--padding-unit);
+    border-right: var(--border-width) solid var(--link-text-color);
 }
 
+nav ul li:last-child {
+    margin-right: 0;
+    border-right: none;
+}
+
+nav ul li:hover {
+    background-color: var(--nav-hover-bg-color);
+}
+
+/* Footer Styling */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    padding: var(--padding-unit);
     text-align: center;
+    clear: both;
+    border-top: var(--border-width) solid var(--link-text-color);
+}
+
+/* Section Styling */
+section {
+    background-color: var(--section-bg-color);
+    padding: var(--padding-unit);
+    margin: var(--padding-unit) 0;
+    border: var(--border-width) solid var(--text-color);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: var(--padding-unit);
+        border: none;
+    }
 }
