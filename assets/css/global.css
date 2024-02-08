@@ -1,11 +1,10 @@
-/* Variables */
 :root {
     --primary-bg-color: #333;
     --text-color: #fff;
     --heading-text-color: #f50000;
     --base-font: 'Arial', sans-serif;
-    --padding-unit: 10px;
-    --border-width: 2px;
+    --padding-unit: 20px;
+    --border-width: 0.5px;
     --link-color: #007bff;
     --email-color: #28a745; 
 
@@ -20,8 +19,8 @@
 /* Body Styling */
 body {
     font-family: var(--base-font);
-    margin: 0;
-    padding: 0;
+    margin: 30;
+    padding: 20;
     background-color: var(--body-bg-color);
     color: var(--text-color);
 }
