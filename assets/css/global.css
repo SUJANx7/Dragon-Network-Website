@@ -2,18 +2,19 @@
 :root {
     --primary-bg-color: #333;
     --text-color: #fff;
+    --heading-text-color: #f50000;
     --base-font: 'Arial', sans-serif;
     --padding-unit: 10px;
     --border-width: 2px;
-    --link-color: #007bff; /* Blue color for links */
-    --email-color: #28a745; /* Green color for email addresses */
+    --link-color: #007bff;
+    --email-color: #28a745; 
 
-    --header-bg-color: var(--primary-bg-color);
-    --footer-bg-color: var(--primary-bg-color);
+    --header-bg-color: #232323;
+    --footer-bg-color: #1c1c1c;
     --link-text-color: var(--text-color);
     --nav-hover-bg-color: #555;
-    --body-bg-color: #f4f4f4;
-    --section-bg-color: #ddd;
+    --body-bg-color: #121212;
+    --section-bg-color: #1e1e1e;
 }
 
 /* Body Styling */
