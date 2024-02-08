@@ -68,7 +68,8 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin-right: var(--padding-unit);
+    margin-right: var(--padding-unit); /* Adjusted spacing */
+    padding-right: var(--padding-unit); /* Added padding for better spacing */
     border-right: var(--border-width) solid var(--link-text-color);
 }
 
