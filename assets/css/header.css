@@ -23,14 +23,24 @@ nav ul li {
     display: inline-block;
     margin-right: var(--padding-unit);
     padding-right: var(--padding-unit);
-    border-right: var(--border-width) solid var(--link-text-color);
+    position: relative;
 }
 
 nav ul li:last-child {
     margin-right: 0;
-    border-right: none;
 }
 
-nav ul li:hover {
-    background-color: var(--nav-hover-bg-color);
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--link-text-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li:hover::after {
+    width: 100%;
 }
