@@ -49,7 +49,7 @@ section {
     background-color: var(--section-bg-color);
     padding: var(--padding-unit);
     margin: var(--padding-unit) 0;
-    border: var(--border-width) solid var(--text-color);
+
 }
 
 /* Responsive Design */
