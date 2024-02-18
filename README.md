@@ -1,7 +1,6 @@
 # Dragon Network Website
 
 [![GitHub Issues](https://img.shields.io/github/issues/Dragon-Network-Minecraft/Dragon-Network-Website?style=for-the-badge)](https://github.com/Dragon-Network-Minecraft/Dragon-Network-Website/issues)
-[![Discord](https://img.shields.io/discord/123456789012345678?label=Discord&style=for-the-badge)](https://discord.gg/CQsNFK6t4U)
 [![GitHub Stars](https://img.shields.io/github/stars/Dragon-Network-Minecraft/Dragon-Network-Website?style=for-the-badge)](https://github.com/Dragon-Network-Minecraft/Dragon-Network-Website/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/Dragon-Network-Minecraft/Dragon-Network-Website?style=for-the-badge)](https://github.com/Dragon-Network-Minecraft/Dragon-Network-Website/network/members)
 
