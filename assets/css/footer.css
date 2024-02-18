@@ -5,4 +5,15 @@ footer {
     text-align: center;
     clear: both;
     border-top: var(--border-width) solid var(--link-text-color);
+    animation: pulse 2s infinite alternate;
+    border-radius: 7px;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 10px var(--fire-glow);
+    }
+    to {
+        box-shadow: 0 0 20px var(--fire-glow);
+    }
 }
