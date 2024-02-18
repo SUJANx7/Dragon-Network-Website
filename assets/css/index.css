@@ -21,7 +21,6 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    animation: fieryBackground 10s infinite alternate;
 }
 
 section {
