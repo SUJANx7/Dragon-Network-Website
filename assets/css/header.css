@@ -3,6 +3,7 @@ header {
     color: var(--text-color);
     padding: var(--padding-unit);
     border-radius: 7px;
+    animation: pulse 2s infinite alternate;
 }
 
 /* Navigation (nav) Styling */
@@ -46,4 +47,13 @@ nav ul li::after {
 
 nav ul li:hover::after {
     width: 100%;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 10px var(--fire-glow);
+    }
+    to {
+        box-shadow: 0 0 20px var(--fire-glow);
+    }
 }
