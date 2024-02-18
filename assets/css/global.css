@@ -50,7 +50,7 @@ section {
     background-color: var(--section-bg-color);
     padding: var(--padding-unit);
     margin: var(--padding-unit) 0;
-
+    border-radius: 7px;
 }
 
 /* Responsive Design */
