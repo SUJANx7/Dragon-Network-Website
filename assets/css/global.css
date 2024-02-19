@@ -1,99 +1,110 @@
 :root {
-    --primary-bg-color: #333;
-    --text-color: #fff;
-    --heading-text-color: #f50000;
-    --base-font: 'Arial', sans-serif;
-    --padding-unit: 20px;
-    --border-width: 0.5px;
-    --link-color: #ff5100;
-    --email-color: #28a745;
-  
-    --header-bg-color: #232323;
-    --footer-bg-color: #1c1c1c;
-    --link-text-color: var(--text-color);
-    --nav-hover-bg-color: #555;
-    --body-bg-color: #121212;
-    --section-bg-color: #1e1e1e;
-    --fire-glow: #ff3300;
-  }
-  
-  /* Body Styling */
+  --primary-bg-color: #333;
+  --text-color: #fff;
+  --heading-text-color: #f50000;
+  --base-font: 'Arial', sans-serif;
+  --padding-unit: 20px;
+  --border-width: 0.5px;
+  --link-color: #ff5100;
+  --email-color: #28a745;
+
+  --header-bg-color: #232323;
+  --footer-bg-color: #1c1c1c;
+  --link-text-color: var(--text-color);
+  --nav-hover-bg-color: #555;
+  --body-bg-color: #121212;
+  --section-bg-color: #1e1e1e;
+  --fire-glow: #ff3300;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--base-font);
+  margin: 30px;
+  padding: 20px;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-text-color);
+}
+
+/* Links Styling */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Email Addresses Styling */
+a[href^="mailto:"] {
+  color: var(--email-color);
+}
+
+/* Section Styling */
+section {
+  background-color: var(--section-bg-color);
+  padding: var(--padding-unit);
+  margin: var(--padding-unit) 0;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
   body {
-    font-family: var(--base-font);
-    margin: 30;
-    padding: 20;
-    background-color: var(--body-bg-color);
-    color: var(--text-color);
+      margin: 10px;
+      padding: 10px;
   }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--heading-text-color);
-  }
-  
-  /* Links Styling */
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Email Addresses Styling */
-  a[href^="mailto:"] {
-    color: var(--email-color);
-  }
-  
-  /* Section Styling */
-  section {
-    background-color: var(--section-bg-color);
-    padding: var(--padding-unit);
-    margin: var(--padding-unit) 0;
-    border-radius: 7px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  section:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Responsive Design */
-  @media only screen and (max-width: 600px) {
-    nav ul {
+
+  /* Adjust navigation for smaller screens */
+  nav ul {
       flex-direction: column;
       align-items: center;
-    }
-  
-    nav ul li {
+  }
+
+  nav ul li {
       display: block;
       margin-bottom: var(--padding-unit);
       border: none;
-    }
   }
-  
+
+  /* Adjust section padding for smaller screens */
+  section {
+      padding: 10px;
+      margin: 10px 0;
+  }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #ff3300, #ff6600, #ff3300, #ff6600); /* Fire-like gradients */
-    border-radius: 6px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #ff5500, #ff8800, #ff5500, #ff8800); /* Hover effect */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: rgba(52, 2, 2, 0.803)
-  }
-  
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff3300, #ff6600, #ff3300, #ff6600);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff5500, #ff8800, #ff5500, #ff8800);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(52, 2, 2, 0.803);
+}
