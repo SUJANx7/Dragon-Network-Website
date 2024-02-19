@@ -65,6 +65,7 @@ footer {
 @media only screen and (max-width: 600px) {
     footer {
         padding: var(--padding-unit-mobile);
+        padding-bottom: 7px;
     }
 
     .left-section,
