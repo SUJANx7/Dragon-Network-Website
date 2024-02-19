@@ -1,19 +1,45 @@
+/* Mobile Viewport Settings */
+meta {
+    name: viewport;
+    content: width=device-width, initial-scale=1.0;
+}
+
+/* Header Styling */
 header {
-    background-color: var(--header-bg-color);
-    color: var(--text-color);
-    padding: var(--padding-unit);
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px;
     border-radius: 7px;
     animation: pulse 2s infinite alternate;
+    text-align: center;
 }
 
-/* Navigation (nav) Styling */
+/* Animation */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Navigation Styling */
 nav {
-    background-color: var(--primary-bg-color);
-    color: var(--link-text-color);
-    padding: var(--padding-unit);
+    background-color: #2ecc71;
+    color: #ffffff;
+    padding: 10px;
     border-radius: 7px;
 }
 
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 5px;
+    }
+}
+
+/* Navigation List Styling */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -24,24 +50,19 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: var(--padding-unit);
-    padding-right: var(--padding-unit);
+    margin: 0 10px;
     position: relative;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
 }
 
 nav ul li::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: var(--link-text-color);
+    background-color: #ffffff;
     transition: width 0.3s ease;
 }
 
@@ -49,11 +70,22 @@ nav ul li:hover::after {
     width: 100%;
 }
 
-@keyframes pulse {
-    from {
-        box-shadow: 0 0 10px var(--fire-glow);
+/* Responsive Font Size */
+header {
+    font-size: 1.5rem; 
+}
+
+nav ul li a {
+    font-size: 1rem; 
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    /* Adjust font size for smaller screens */
+    header {
+        font-size: 1.2rem;
     }
-    to {
-        box-shadow: 0 0 20px var(--fire-glow);
+    nav ul li a {
+        font-size: 0.9rem;
     }
 }
