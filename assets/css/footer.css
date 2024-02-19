@@ -1,8 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
+/* Default styling for larger screens */
 footer {
     background-color: var(--footer-bg-color);
     color: #fff; 
@@ -62,5 +58,27 @@ footer {
     }
     to {
         box-shadow: 0 0 20px var(--fire-glow);
+    }
+}
+
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 600px) {
+    footer {
+        padding: var(--padding-unit-mobile);
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px; 
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .right-section {
+        margin-left: 0;
     }
 }
