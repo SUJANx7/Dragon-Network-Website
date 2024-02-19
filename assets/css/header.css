@@ -10,24 +10,12 @@ header {
     color: #ffffff;
     padding: 20px;
     border-radius: 7px;
-    animation: pulse 2s infinite alternate;
     text-align: center;
-}
-
-/* Animation */
-@keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.05);
-    }
 }
 
 /* Navigation Styling */
 nav {
-    background-color: rgba(255, 255, 240, 0.105);
-    color: var(--link-text-color);
+    color: #28a745;
     padding: 10px;
     border-radius: 7px;
 }
